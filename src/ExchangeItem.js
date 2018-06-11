@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PresItem extends Component {
+class ExchangeItem extends Component {
 	constructor(props){
 		super(props);
 
@@ -29,7 +29,7 @@ class PresItem extends Component {
 	}
 
 	render() {
-  		const { name, lastname} = this.props;
+  		const { name, symbol} = this.props;
 
     return (
     	<div>
@@ -38,7 +38,7 @@ class PresItem extends Component {
   				?(
   					<form onSubmit={this.onEditSubmit}>
   					<input placeholder="Name" ref={nameInput => this.nameInput = nameInput} defaultValue={name}/>
-    				<input placeholder="Lastname" ref={lastnameInput => this.lastnameInput = lastnameInput} defaultValue={lastname}/>
+    				<input placeholder="Lastname" ref={lastnameInput => this.lastnameInput = lastnameInput} defaultValue={symbol}/>
     				<button>Save</button>
   					</form>
   				)
@@ -46,7 +46,7 @@ class PresItem extends Component {
   					<div>
   						<span>{name}</span> 
                 		{' | '}
-                		<span>{lastname}</span>
+                		<span>{symbol}</span>
                 		{' | '}
                 		<button onClick={this.onEdit}>Edit</button>
                 		{' | '}
@@ -59,4 +59,4 @@ class PresItem extends Component {
   }
 }
 
-export default PresItem;
+export default ExchangeItem;

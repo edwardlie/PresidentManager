@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AddPresident extends Component {
+class AddExchange extends Component {
 	constructor(props){
 		super(props);
 
@@ -16,7 +16,7 @@ class AddPresident extends Component {
 	render() {
     return (
     	<form onSubmit={this.onSubmit}>
-    		<h3>Add President</h3>
+    		<h3>Add Exchange</h3>
     		<input placeholder="Name" ref={nameInput => this.nameInput = nameInput} />
     		<input placeholder="Lastname" ref={lastnameInput => this.lastnameInput = lastnameInput} />
     		<button>Add</button>
@@ -25,4 +25,4 @@ class AddPresident extends Component {
     );
   }
 }
-export default AddPresident;
+export default AddExchange;
